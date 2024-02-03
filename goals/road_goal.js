@@ -1,8 +1,10 @@
-import { Goal } from  "../goals/goal"
+import { Goal } from  "./goal"
 
-class RoadGoal extends Goal {
+export class RoadGoal extends Goal {
 
-    constructor(){}
+    constructor(){
+        super()
+    }
 
     is_valid() {
         return true

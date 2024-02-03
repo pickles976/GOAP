@@ -1,8 +1,10 @@
 import { Action } from  "./action"
 
-class BrickAction extends Action {
+export class BrickAction extends Action {
 
-    constructor(){}
+    constructor(){
+        super()
+    }
 
     get_cost() {
         return 1
@@ -20,6 +22,7 @@ class BrickAction extends Action {
 
     perform(actor) {
         actor.state["brick"] = 1
+        return true
     }
 
 }

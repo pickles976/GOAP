@@ -1,6 +1,6 @@
 
 
-class Goal {
+export class Goal {
 
     constructor () {
 

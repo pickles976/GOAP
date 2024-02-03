@@ -1,8 +1,10 @@
 import { Action } from  "./action"
 
-class RoadAction extends Action {
+export class RoadAction extends Action {
 
-    constructor(){}
+    constructor(){
+        super()
+    }
 
     get_cost() {
         return 1
@@ -17,16 +19,17 @@ class RoadAction extends Action {
 
     get_effects() {
         return {
-            "road": 1,
+            "roads": 1,
             "wood": 0,
             "brick": 0
         }
     }
 
     perform(actor) {
-        actor.state["road"] = 1
+        actor.state["roads"] = 1
         actor.state["wood"] = 0 
         actor.state["brick"] = 0
+        return true
     }
 
 }

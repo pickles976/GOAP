@@ -1,5 +1,7 @@
 # goap
 
+[GOAP reference code](https://github.com/viniciusgerevini/godot-goap)
+
 # Stuff
 
 WORLD STATE

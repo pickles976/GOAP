@@ -1,6 +1,6 @@
 
 
-class Agent {
+export class Agent {
 
     constructor(planner, goals) {
         this.planner = planner
@@ -21,7 +21,7 @@ class Agent {
          * Change goals and build a plan
          */
 
-        goal = this.get_best_goal()
+        let goal = this.get_best_goal()
         if (this.current_goal == null || goal != this.current_goal) {
 
             // TODO: in some implementations, we would input the world state into the planner and also inject the state of our agent.
@@ -40,7 +40,7 @@ class Agent {
     get_best_goal(){
         let highest_priority = null
 
-        for (goal in this.goals) {
+        for (const goal of this.goals) {
             if (goal.is_valid() && (highest_priority == null || goal.priority() > highest_priority.priority())) {
                 highest_priority = goal
             }

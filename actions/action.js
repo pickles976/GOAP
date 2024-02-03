@@ -1,5 +1,5 @@
 
-class Action {
+export class Action {
 
     constructor() {}
 
@@ -17,6 +17,10 @@ class Action {
 
     perform(actor) {
         return false
+    }
+
+    is_valid(state){
+        return true
     }
 
 }
